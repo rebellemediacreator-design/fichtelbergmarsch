@@ -13,56 +13,51 @@
   let idx = 0;
   pageTotal.textContent = String(pages.length);
 
-  // Clone chicken SVG from page 1 into all other pages if empty
-  const firstSvg = pages[0].querySelector("[data-chicken] svg");
-  pages.forEach((p) => {
-    const slot = p.querySelector("[data-chicken]");
-    if (!slot) return;
-    if (!slot.querySelector("svg") && firstSvg) {
-      slot.innerHTML = firstSvg.outerHTML;
-    }
-  });
-
   function setTheme(val){ root.setAttribute("data-theme", val); }
   setTheme("cocoa");
   themeSelect.value = "cocoa";
   themeSelect.addEventListener("change", (e) => setTheme(e.target.value));
+  // GLOBAL egg drop (bei jedem Blättern)
+  function layEgg(direction){
+    const eggsWrap = document.getElementById("globalEggs");
+    const chickenEl = document.getElementById("globalChicken");
+    if (!eggsWrap || !chickenEl) return;
 
-  function layEgg(pageEl, direction){
-    const wrap = pageEl.querySelector("[data-eggs]");
-    const chicken = pageEl.querySelector("[data-chicken]");
-    if (!wrap || !chicken) return;
+    const c = chickenEl.getBoundingClientRect();
 
     const egg = document.createElement("div");
     egg.className = "rb-egg";
 
-    const startX = direction === "next" ? 58 : 46;
-    const startY = 64;
+    // Ei soll unter dem Bauch landen (Viewport-basiert)
+    const x = Math.max(10, Math.min(window.innerWidth - 40, c.left + c.width * 0.58));
+    const yTarget = 60;
 
-    egg.style.left = `${startX}px`;
-    egg.style.top = `${startY}px`;
-    wrap.appendChild(egg);
+    egg.style.left = `${x}px`;
+    egg.style.top = `20px`;
+    eggsWrap.appendChild(egg);
 
-    const drop = 22 + Math.random() * 10;
-    const drift = (Math.random() * 10 - 5);
+    const drop = 30 + Math.random() * 10;
+    const drift = (Math.random() * 16 - 8);
 
     requestAnimationFrame(() => {
       egg.style.opacity = "1";
       egg.animate(
         [
-          { transform: "translate3d(0, -6px, 0) scale(0.85)", opacity: 0 },
-          { transform: "translate3d(0, 0px, 0) scale(1)", opacity: 1 },
+          { transform: "translate3d(0,-6px,0) scale(.85)", opacity: 0 },
+          { transform: "translate3d(0,0,0) scale(1)", opacity: 1 },
           { transform: `translate3d(${drift}px, ${drop}px, 0) scale(1)`, opacity: 1 },
           { transform: `translate3d(${drift}px, ${drop - 3}px, 0) scale(1)`, opacity: 1 }
         ],
         { duration: 520, easing: "cubic-bezier(.2,.8,.2,1)" }
       );
+      egg.style.top = `${yTarget}px`;
     });
 
-    // Keep only last 5 eggs
-    const eggs = Array.from(wrap.querySelectorAll(".rb-egg"));
-    if (eggs.length > 5) eggs.slice(0, eggs.length - 5).forEach(e => e.remove());
+    // Keep only last 6 eggs
+    const eggs = Array.from(eggsWrap.querySelectorAll(".rb-egg"));
+    if (eggs.length > 6) eggs.slice(0, eggs.length - 6).forEach(e => e.remove());
   }
+
 
   function setActive(n, direction="next") {
     const clamped = Math.max(0, Math.min(pages.length - 1, n));
@@ -76,7 +71,7 @@
     const pct = ((idx + 1) / pages.length) * 100;
     progressFill.style.width = `${pct}%`;
 
-    layEgg(pages[idx], direction);
+    layEgg(direction);
     pages[idx].scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
@@ -119,5 +114,5 @@
   pages.forEach((p, i) => p.classList.toggle("is-active", i === 0));
   pageNow.textContent = "1";
   progressFill.style.width = `${(1 / pages.length) * 100}%`;
-  layEgg(pages[0], "next");
+  layEgg("next");
 })();
