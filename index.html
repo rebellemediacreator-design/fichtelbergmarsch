@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fichtelbergmarsch 65K – Trainingshandbuch (16 Wochen)</title>
+  <meta name="description" content="Trainingshandbuch für den Fichtelbergmarsch (65 km) am 9. Mai 2026. 16 Wochen Plan, 60 Minuten nach Arbeit, Kraft & Ausdauer, Supplements. Blätter-Book mit Huhn, das bei jedem Blättern ein Ei legt." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="rb-app" id="app">
+    <header class="rb-top">
+      <div class="rb-brand">
+        <div class="rb-mark">RB</div>
+        <div class="rb-brandtext">
+          <div class="rb-title">Fichtelbergmarsch • 65 km</div>
+          <div class="rb-sub">9. Mai 2026 • 16 Wochen • 60 Min nach Arbeit • Home Edition</div>
+        </div>
+      </div>
+
+      <div class="rb-controls">
+        <label class="rb-select">
+          <span>Farbschema</span>
+          <select id="themeSelect" aria-label="Farbschema auswählen">
+            <option value="cocoa">Cocoa / Lemon</option>
+            <option value="nightmint">Night Mint</option>
+            <option value="ashrose">Ash Rose</option>
+          </select>
+        </label>
+      </div>
+    </header>
+
+    <main class="rb-book" aria-live="polite">
+      <!-- PAGE 1 -->
+      <section class="rb-page is-active" data-page="1">
+        <div class="rb-page-inner">
+          <div class="rb-hero">
+            <div class="rb-hero-left">
+              <p class="rb-kicker">FICHTELBERGMARSCH • 65 KM • 9. MAI 2026</p>
+              <h1>16 Wochen. Kein Studio. 60 Minuten nach Arbeit.</h1>
+              <p class="rb-lead">
+                Harte Arbeit macht müde – sie macht dich nicht automatisch ausdauernd.
+                Dieses Handbuch baut dich auf: <strong>robust, verletzungsarm, finish-sicher</strong>.
+              </p>
+
+              <div class="rb-callouts">
+                <div class="rb-chip">3–4 Ausdauereinheiten/Woche</div>
+                <div class="rb-chip">1× Kraft (20–25 min)</div>
+                <div class="rb-chip">Wochenende = Long + Back-to-back</div>
+              </div>
+
+              <div class="rb-cta">
+                <a class="rb-btn" href="#contact" id="ctaContact">WhatsApp Fragen</a>
+                <button class="rb-btn ghost" id="btnJumpPlan" type="button">Zum 16-Wochen-Plan</button>
+              </div>
+
+              <div class="rb-miniinfo">
+                <div class="rb-minirow">
+                  <span class="rb-mini-label">Kontakt</span>
+                  <a class="rb-mini-link" href="https://wa.me/491629471865" rel="noopener">0162 9471865</a>
+                </div>
+                <div class="rb-minirow">
+                  <span class="rb-mini-label">Prinzip</span>
+                  <span class="rb-mini-text">Wochentage = smart & kurz • Wochenende = Zeit auf den Beinen</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="rb-hero-right">
+              <div class="rb-card">
+                <h2>So nutzt du das Handbuch</h2>
+                <ol class="rb-list">
+                  <li>Blättere Seite für Seite durch (Pfeile / Wischen).</li>
+                  <li>Trainiere konservativ: du willst <strong>Woche für Woche</strong> aufbauen.</li>
+                  <li>Verpflegung im Training testen – Eventtag ist kein Experiment.</li>
+                </ol>
+                <p class="rb-note">
+                  Hinweis: Bei anhaltenden Schmerzen oder Erkrankungen bitte medizinisch abklären.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rb-chicken-wrap" aria-hidden="true">
+            <div class="rb-chicken" data-chicken>
+              <svg viewBox="0 0 220 220" role="img" aria-label="Huhn">
+                <defs>
+                  <linearGradient id="rbHen" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="currentColor" stop-opacity="0.9"/>
+                    <stop offset="1" stop-color="currentColor" stop-opacity="0.55"/>
+                  </linearGradient>
+                </defs>
+                <g fill="none" stroke="none">
+                  <path d="M68 140c-10-22-7-52 18-67 24-14 51-1 62 18 16 2 30 14 33 30 4 20-10 38-31 42-22 5-44 0-59-7-10-4-18-10-23-16z" fill="url(#rbHen)"/>
+                  <circle cx="148" cy="92" r="6" fill="#0b0b0c"/>
+                  <path d="M160 96c18 2 30 10 36 22-12-2-23-1-33 3" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round" opacity=".55"/>
+                  <path d="M132 70c-2-10 7-18 18-18 8 0 13 4 16 10-9-1-18 3-20 12" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round" opacity=".7"/>
+                  <path d="M86 166c10 6 25 25 45 10" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round" opacity=".6"/>
+                </g>
+              </svg>
+            </div>
+            <div class="rb-eggs" data-eggs></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 2 -->
+      <section class="rb-page" data-page="2">
+        <div class="rb-page-inner">
+          <h2>Setup: Was zählt wirklich</h2>
+
+          <div class="rb-grid2">
+            <div class="rb-card">
+              <h3>Belastung ≠ Training</h3>
+              <p>
+                Körperlich harte Arbeit erzeugt Müdigkeit, aber selten gezielten Aufbau.
+                Wir brauchen <strong>planbare Reize</strong>: locker, lang, bergig, stabil.
+              </p>
+              <ul class="rb-bullets">
+                <li>80% locker (Sprechtempo), 20% gezielt (Bergstruktur)</li>
+                <li>Tempo ist optional – Robustheit ist Pflicht</li>
+                <li>Sehnen brauchen 8–12 Wochen, um aufzuholen</li>
+              </ul>
+            </div>
+
+            <div class="rb-card">
+              <h3>Minimal-Equipment</h3>
+              <ul class="rb-bullets">
+                <li>2 Paar Schuhe (wechseln reduziert Überlastung)</li>
+                <li>Stirnlampe für Abends</li>
+                <li>Rucksack + Softflasks (ab Woche 6–7)</li>
+                <li>Blasen-Setup (Tape/Creme) rechtzeitig testen</li>
+              </ul>
+              <p class="rb-note">Alles wird im Training ausprobiert – nicht am 9. Mai.</p>
+            </div>
+          </div>
+
+          <div class="rb-card">
+            <h3>Wenn die Arbeit „zerlegt“</h3>
+            <ul class="rb-bullets">
+              <li>Freitag streichen statt Long Run riskieren</li>
+              <li>Donnerstag kürzer, aber Long Run bleibt heilig</li>
+              <li>Schmerz = Signal, nicht Gegner</li>
+            </ul>
+          </div>
+
+          <div class="rb-chicken-wrap" aria-hidden="true">
+            <div class="rb-chicken" data-chicken></div>
+            <div class="rb-eggs" data-eggs></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 3 -->
+      <section class="rb-page" data-page="3">
+        <div class="rb-page-inner">
+          <h2>Kraft zu Hause (20–25 Minuten)</h2>
+          <p class="rb-lead">
+            1× pro Woche ist das Minimum. 2× wäre Luxus.
+            Fokus: <strong>Waden/Füße</strong>, Hüfte, Rumpf – damit du Stunden tragen kannst.
+          </p>
+
+          <div class="rb-grid2">
+            <div class="rb-card">
+              <h3>Plan A (ohne Equipment)</h3>
+              <div class="rb-table">
+                <div class="rb-row rb-head">
+                  <div>Übung</div><div>Umfang</div><div>Hinweis</div>
+                </div>
+                <div class="rb-row"><div>Split Squat</div><div>2×8–12/Seite</div><div>kontrolliert, Knie stabil</div></div>
+                <div class="rb-row"><div>Hip Hinge (Good Morning)</div><div>2×10–12</div><div>Hüfte nach hinten, Rücken neutral</div></div>
+                <div class="rb-row"><div>Step-ups (Stufe)</div><div>2×8–12/Seite</div><div>nicht „hochspringen“</div></div>
+                <div class="rb-row"><div>Wadenheben</div><div>3×15–25</div><div>oben 1 Sek halten</div></div>
+                <div class="rb-row"><div>Dead Bug</div><div>2×8–10/Seite</div><div>langsam, Rumpf fest</div></div>
+                <div class="rb-row"><div>Side Plank</div><div>2×25–45s/Seite</div><div>Hüfte nicht kippen</div></div>
+              </div>
+              <p class="rb-note">Schwerer machen: Rucksack füllen (Wasserflaschen) für Hinge/Step-ups.</p>
+            </div>
+
+            <div class="rb-card">
+              <h3>Plan B (Mini-Equipment)</h3>
+              <ul class="rb-bullets">
+                <li>Band Rows: 3×12–15</li>
+                <li>Band RDL: 3×10–12</li>
+                <li>Band Lateral Walks: 2×12–15/Seite</li>
+                <li>Loaded Carry (Einkaufstaschen): 4×30–60s</li>
+              </ul>
+              <p class="rb-note">Wenn Füße/Waden zwicken: exzentrisches Wadenheben (langsam runter).</p>
+            </div>
+          </div>
+
+          <div class="rb-chicken-wrap" aria-hidden="true">
+            <div class="rb-chicken" data-chicken></div>
+            <div class="rb-eggs" data-eggs></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 4 -->
+      <section class="rb-page" data-page="4" id="plan">
+        <div class="rb-page-inner">
+          <h2>Woche (fix) – 60 Minuten nach Arbeit</h2>
+          <p class="rb-lead">
+            Wochentage sind kurz, aber gezielt. Der „Ultrateil“ liegt am Wochenende.
+          </p>
+
+          <div class="rb-grid2">
+            <div class="rb-card">
+              <h3>Wochentage (Mo–Fr)</h3>
+              <ul class="rb-bullets">
+                <li><strong>Mo</strong>: frei oder 10–15 min Mobility</li>
+                <li><strong>Di</strong>: 45–60 min locker (Zone 2)</li>
+                <li><strong>Mi</strong>: Kraft 20–25 min + 20–30 min zügiges Gehen</li>
+                <li><strong>Do</strong>: 45–60 min Berggehen (oder Struktur: 6×4 min zügig)</li>
+                <li><strong>Fr</strong>: frei (oder 30–45 min sehr locker, nur wenn frisch)</li>
+              </ul>
+              <p class="rb-note">Wenn Arbeit hart: Freitag bleibt frei. Das rettet den Samstag.</p>
+            </div>
+
+            <div class="rb-card">
+              <h3>Wochenende (Sa/So)</h3>
+              <ul class="rb-bullets">
+                <li><strong>Sa</strong>: Long = Zeit auf den Beinen (Marsch-Fokus)</li>
+                <li><strong>So</strong>: Back-to-back light (locker, zum „Tragen lernen“)</li>
+              </ul>
+              <p class="rb-note">Marschtraining gewinnt über „dauerhaft machbar“, nicht über „krass“.</p>
+            </div>
+          </div>
+
+          <div class="rb-chicken-wrap" aria-hidden="true">
+            <div class="rb-chicken" data-chicken></div>
+            <div class="rb-eggs" data-eggs></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 5 -->
+      <section class="rb-page" data-page="5">
+        <div class="rb-page-inner">
+          <h2>16-Wochen-Progression (Long + So)</h2>
+          <p class="rb-lead">
+            Das ist der Hebel. Long wird langsam länger. Jede 4.–5. Woche: Entlastung.
+          </p>
+
+          <div class="rb-card">
+            <h3>Long Run / Marsch (Sa) + Back-to-back (So)</h3>
+            <div class="rb-table rb-table-wide">
+              <div class="rb-row rb-head rb-wide">
+                <div>Woche</div><div>Sa Long</div><div>So locker</div><div>Notiz</div>
+              </div>
+
+              <div class="rb-row rb-wide"><div>1</div><div>1:30</div><div>0:45</div><div>ruhig, Technik/Schuhe checken</div></div>
+              <div class="rb-row rb-wide"><div>2</div><div>1:45</div><div>0:50</div><div>gehen erlaubt, Puls runter</div></div>
+              <div class="rb-row rb-wide"><div>3</div><div>2:00</div><div>0:55</div><div>erste Verpflegung testen</div></div>
+              <div class="rb-row rb-wide"><div>4</div><div>2:15</div><div>1:00</div><div>Rucksack optional (leicht)</div></div>
+
+              <div class="rb-row rb-wide"><div>5</div><div>1:45</div><div>0:45</div><div><strong>Entlastung</strong> (−25%)</div></div>
+
+              <div class="rb-row rb-wide"><div>6</div><div>2:30</div><div>1:00</div><div>mehr Höhenmeter, zügiges Gehen</div></div>
+              <div class="rb-row rb-wide"><div>7</div><div>2:45</div><div>1:10</div><div>60 g KH/h antesten (wenn verträglich)</div></div>
+              <div class="rb-row rb-wide"><div>8</div><div>3:00</div><div>1:20</div><div>Rucksack/Flasks wie geplant</div></div>
+              <div class="rb-row rb-wide"><div>9</div><div>3:30</div><div>1:30</div><div>Blasenmanagement prüfen</div></div>
+
+              <div class="rb-row rb-wide"><div>10</div><div>2:30</div><div>1:00</div><div><strong>Entlastung</strong></div></div>
+
+              <div class="rb-row rb-wide"><div>11</div><div>3:45</div><div>1:30</div><div>Rucksack-Session Do beibehalten</div></div>
+              <div class="rb-row rb-wide"><div>12</div><div>4:00</div><div>1:45</div><div>Salz/Electrolyte konsequent testen</div></div>
+              <div class="rb-row rb-wide"><div>13</div><div>4:30</div><div>2:00</div><div>Stöcke? (falls genutzt) im Training</div></div>
+
+              <div class="rb-row rb-wide"><div>14</div><div>5:00</div><div>2:00</div><div><strong>Peak</strong> – marschieren, nicht ballern</div></div>
+
+              <div class="rb-row rb-wide"><div>15</div><div>3:00</div><div>1:15</div><div><strong>Taper</strong> – frisch werden</div></div>
+              <div class="rb-row rb-wide"><div>16</div><div>Event</div><div>—</div><div><strong>9. Mai 2026</strong> Fichtelbergmarsch</div></div>
+            </div>
+
+            <p class="rb-note">
+              Wenn Wochenende nicht so lang möglich: Sa bleibt Long, So wird kürzer (30–60 min).
+              Lieber weniger Volumen als Verletzung.
+            </p>
+          </div>
+
+          <div class="rb-chicken-wrap" aria-hidden="true">
+            <div class="rb-chicken" data-chicken></div>
+            <div class="rb-eggs" data-eggs></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 6 -->
+      <section class="rb-page" data-page="6">
+        <div class="rb-page-inner">
+          <h2>Ernährung & Supplements (ohne Marketing)</h2>
+
+          <div class="rb-grid2">
+            <div class="rb-card">
+              <h3>Ernährung: der schlanke Körper braucht Treibstoff</h3>
+              <ul class="rb-bullets">
+                <li>Kein Kaloriendefizit – sonst bricht Regeneration</li>
+                <li>Vor Training: 20–40 g Kohlenhydrate (Banane/Toast/Schorle)</li>
+                <li>Nach Training: Protein + Kohlenhydrate (einfach halten)</li>
+                <li>Ab Long >2h: 30–45 g KH/h → später 60 g/h, wenn Magen trainiert</li>
+                <li>Trinken + Salz: regelmäßig, nicht erst bei Durst</li>
+              </ul>
+            </div>
+
+            <div class="rb-card">
+              <h3>Supps: sinnvoll & simpel</h3>
+              <ul class="rb-bullets">
+                <li><strong>Kreatin</strong> 3–5 g/Tag</li>
+                <li><strong>Protein</strong> nur wenn Essen nicht reicht (20–40 g)</li>
+                <li><strong>Elektrolyte/Natrium</strong> für lange Einheiten/Schweiß</li>
+                <li><strong>Koffein</strong> optional (vorher testen)</li>
+              </ul>
+              <p class="rb-note">Optional: Omega-3 (wenig Fisch), Vitamin D (Winter, ideal nach Blutwert).</p>
+            </div>
+          </div>
+
+          <div class="rb-card">
+            <h3>Warnsignale (sofort reagieren)</h3>
+            <ul class="rb-bullets">
+              <li>Stechender Schmerz (Achillessehne/Plantar) → reduzieren, nicht „wegtrainieren“</li>
+              <li>Schlaf im Keller + Puls hoch → Entlastungswoche vorziehen</li>
+              <li>Appetit weg + Gewicht runter → mehr essen, mehr trinken, Salz prüfen</li>
+            </ul>
+          </div>
+
+          <div class="rb-chicken-wrap" aria-hidden="true">
+            <div class="rb-chicken" data-chicken></div>
+            <div class="rb-eggs" data-eggs></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 7 -->
+      <section class="rb-page" data-page="7" id="contact">
+        <div class="rb-page-inner">
+          <h2>Fragen & Anpassung</h2>
+          <div class="rb-card">
+            <p class="rb-lead">
+              Schreib mir kurz (2 Zeilen): Gelände (flach/bergig), Wochenendzeit (Sa/So),
+              und ob Stöcke genutzt werden. Dann passe ich die Peak-Wochen (11–14) exakt an.
+            </p>
+
+            <div class="rb-contact">
+              <div class="rb-contact-box">
+                <div class="rb-contact-label">WhatsApp</div>
+                <a class="rb-contact-link" href="https://wa.me/491629471865" rel="noopener">0162 9471865</a>
+                <div class="rb-contact-sub">Für Fragen zum Plan</div>
+              </div>
+
+              <div class="rb-contact-box">
+                <div class="rb-contact-label">Kurz-Checkliste</div>
+                <ul class="rb-bullets">
+                  <li>Sa Long konsequent</li>
+                  <li>Waden/Füße wöchentlich stärken</li>
+                  <li>Rucksack/Verpflegung testen</li>
+                  <li>Entlastungswochen ernst nehmen</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <footer class="rb-footer">
+            <div class="rb-footer-inner">
+              <div class="rb-footer-left">
+                <div class="rb-footer-title">Branding</div>
+                <div class="rb-footer-sub">WhatsApp: <a href="https://wa.me/491629471865" rel="noopener">0162 9471865</a></div>
+              </div>
+              <div class="rb-footer-right">
+                <div class="rb-mini">© Trainingshandbuch • Fichtelbergmarsch 65K • 9. Mai 2026</div>
+              </div>
+            </div>
+          </footer>
+
+          <div class="rb-chicken-wrap" aria-hidden="true">
+            <div class="rb-chicken" data-chicken></div>
+            <div class="rb-eggs" data-eggs></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="rb-nav" aria-label="Blätternavigation">
+      <button class="rb-navbtn" id="prevBtn" type="button" aria-label="Vorherige Seite">‹</button>
+      <div class="rb-progress">
+        <div class="rb-progressbar"><div class="rb-progressfill" id="progressFill"></div></div>
+        <div class="rb-pagenum"><span id="pageNow">1</span>/<span id="pageTotal">7</span></div>
+      </div>
+      <button class="rb-navbtn" id="nextBtn" type="button" aria-label="Nächste Seite">›</button>
+    </nav>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
